@@ -1,0 +1,144 @@
+
+version: 2
+
+sources: 
+  - name: projet_ascensio_join_1
+    tables:
+      - name: atle_women
+        description: "scrap des perfs feminines en atletisme"
+        columns:
+          - name: mark
+            description: "Temps de course"
+          - name: competitor
+            description: "Nom de l'athlete"
+          - name: DOB
+            description: "Date de la course"
+          - name: nationality
+            description: "Nationalité de l'athlete"
+          - name: position
+            description: "Position de l'athlete dans la course"
+          - name: event_place
+            description: "Nom et lieu de la course"
+          - name: date
+            description: "Date de la course"
+          - name: compet
+            description: "Type de course"
+          
+  - name: projet_ascensio_clean
+    tables:
+      - name: swimming_clean_men
+        description: "scrap des perfs masculines en natation"
+        columns:
+          - name: discipline
+            description: "Type de course"
+          - name: mark
+            description: "Temps de course"
+          - name: competitor
+            description: "Nom de l'athlete"
+          - name: gender
+            description: "Genre de l'athlete"
+          - name: team
+            description: "Nation de l'athlete"
+          - name: event
+            description: "Nom et lieu de la course"
+          - name: date
+            description: "Date de la course"
+          - name: record
+            description: "Le chrono est-il un record quand il a été établi"
+          - name: mark_seconds
+            description: "Temps de la course en seconde"
+      - name: swimming_clean_women
+        description: "scrap des perfs féminines en natation"
+        columns:
+          - name: discipline
+            description: "Type de course"
+          - name: mark
+            description: "Temps de course"
+          - name: competitor
+            description: "Nom de l'athlete"
+          - name: gender
+            description: "Genre de l'athlete"
+          - name: team
+            description: "Nation de l'athlete"
+          - name: event
+            description: "Nom et lieu de la course"
+          - name: date
+            description: "Date de la course"
+          - name: record
+            description: "Le chrono est-il un record quand il a été établi"
+          - name: mark_seconds
+            description: "Temps de la course en seconde"
+
+      - name: athlete_events
+        description: ""
+        columns:
+          - name: name
+            description: "Nom de l'athlete"
+          - name: sex
+            description: "Genre de l'athlete"
+          - name: age
+            description: "Age de l'athlete lors de l'event"
+          - name: height
+            description: "Taille de l'athlete lors de l'event"
+          - name: weight
+            description: "Poids de l'athlete lors de l'event"
+          - name: country
+            description: "Pays que représente de l'athlete"
+          - name: country_noc
+            description: "Abbreviation du pays"
+          - name: edition
+            description: "Année et saison de l'édition"
+          - name: year
+            description: "Année de l'édition"
+          - name: Season
+            description: "Saison de l'édition"
+          - name: City
+            description: "Ville d'organisation"
+          - name: sport
+            description: "Type de sport, ici on a pris que la natation et l'athletisme"
+          - name: event
+            description: "concat de la colonne sport sex avec l'épreuve"
+          - name: medal
+            description: "médaille obtenu par l'athlete"
+      - name: asc_olympics_results_athlete
+        description: ""
+        columns:
+          - name: sport
+            description: "Type de sport, ici on a pris que la natation et l'athletisme"
+          - name: medal
+            description: "médaille obtenu par l'athlete"
+          - name: event
+            description: "concat de la colonne sport sex avec l'épreuve"
+          - name: sex
+            description: "Genre de l'athlete"
+          - name: height
+            description: "Taille de l'athlete lors de l'event"
+          - name: weight_int
+            description: "Poids de l'athlete lors de l'event"
+          - name: born_year
+            description: "Année de naissance de l'athlete"
+          - name: age
+            description: "Age de l'athlete lors de l'event"
+          - name: athlete_id
+            description: "Clé ID de l'athlete"
+          - name: name
+            description: "Nom de l'athlete"
+          
+models:
+    - name: my_first_dbt_model
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: my_second_dbt_model
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
