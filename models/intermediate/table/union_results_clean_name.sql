@@ -25,5 +25,10 @@ country_noc,
 year_compet,
 sport,
 event,
-REGEXP_REPLACE(NORMALIZE(lower(name), NFD), r'\p{M}', '') AS clean_name 
+REPLACE(
+  REPLACE(
+    REPLACE(
+      REPLACE(
+REGEXP_REPLACE(NORMALIZE(lower(name), NFD), r'\p{M}', ''),'"',''),"(",""), ")", ""), "ß","ss"
+)AS name,
 FROM sub1
