@@ -100,6 +100,7 @@ sources:
             description: "concat de la colonne sport sex avec l'épreuve"
           - name: medal
             description: "médaille obtenu par l'athlete"
+
       - name: asc_olympics_results_athlete
         description: ""
         columns:
@@ -123,6 +124,58 @@ sources:
             description: "Clé ID de l'athlete"
           - name: name
             description: "Nom de l'athlete"
+
+      - name: athlete_events_V3
+        description: ""
+        columns:
+          - name: name_V1
+            description: "Nom de l'athlete"
+          - name: sex_2
+            description: "Genre de l'athlete"
+          - name: height_3
+            description: "Taille de l'athlete lors de l'event"
+          - name: weight_4
+            description: "Poids de l'athlete lors de l'event"
+          - name: year_born_5
+            description: "année de naissance"
+          - name: age_6
+            description: "Age de l'athlete lors de l'event"
+          - name: country_7
+            description: "Pays que représente de l'athlete"
+          - name: country_noc_8
+            description: "Abbreviation du pays"
+          - name: year_9
+            description: "Année de l'édition"
+          - name: sport_10
+            description: "Type de sport, ici on a pris que la natation et l'athletisme"
+          - name: event_11
+            description: "concat de la colonne sport sex avec l'épreuve"
+          
+      - name: asc_olympics_results_athlete_V3
+        description: ""
+        columns:
+          - name: name_V1
+            description: "Nom de l'athlete"
+          - name: sex_2
+            description: "Genre de l'athlete"
+          - name: height_3
+            description: "Taille de l'athlete lors de l'event"
+          - name: weight_4
+            description: "Poids de l'athlete lors de l'event"
+          - name: year_born_5
+            description: "année de naissance"
+          - name: age_6
+            description: "Age de l'athlete lors de l'event"
+          - name: country_7
+            description: "Pays que représente de l'athlete"
+          - name: country_noc_8
+            description: "Abbreviation du pays"
+          - name: year_9
+            description: "Année de l'édition"
+          - name: sport_10
+            description: "Type de sport, ici on a pris que la natation et l'athletisme"
+          - name: event_11
+            description: "concat de la colonne sport sex avec l'épreuve"
           
 models:
     - name: my_first_dbt_model
