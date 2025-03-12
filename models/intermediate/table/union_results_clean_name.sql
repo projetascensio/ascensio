@@ -30,5 +30,5 @@ REPLACE(
     REPLACE(
       REPLACE(
 REGEXP_REPLACE(NORMALIZE(lower(name), NFD), r'\p{M}', ''),'"',''),"(",""), ")", ""), "ß","ss"
-)AS name,
+)AS clean_name,
 FROM sub1
