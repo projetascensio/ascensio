@@ -176,22 +176,4 @@ sources:
             description: "Type de sport, ici on a pris que la natation et l'athletisme"
           - name: event_11
             description: "concat de la colonne sport sex avec l'épreuve"
-          
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
