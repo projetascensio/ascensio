@@ -24,7 +24,7 @@ sources:
           - name: compet
             description: "Type de course"
           
-  - name: projet_ascensio_clean
+  - name: projet_ascencio_clean
     tables:
       - name: swimming_clean_men
         description: "scrap des perfs masculines en natation"
